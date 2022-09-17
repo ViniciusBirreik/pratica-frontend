@@ -1,14 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/home'
+import Register from './pages/registration'
 import MyForm from './pages/form'
+import Bar from './config/layout'
+import Home from './pages/home'
 
 export default function Routers() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/form' element={<MyForm/>} />
+                <Route path='/registration' element={<Bar component={Register}/>}/>
+                <Route path='/form' element={<Bar component={MyForm}/>} />
+                <Route path='/' element={<Bar component={Home}/>}/>
             </Routes>
         </BrowserRouter>
     )
