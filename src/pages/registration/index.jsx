@@ -23,7 +23,7 @@ export default function Register() {
     
     return(
         <>
-            <Box position='relative' component='form' autoComplete='off' onSubmit={registration}>
+            <Box position='relative' component='form' autoComplete='off' onSubmit={registration} sx={{display: 'flex', justifyContent: 'start', alignItems: 'center', flexDirection: 'column'}}>
                 <TextField variant='standard' required label='Nome:' sx={{margin: '20px'}}>
                     <input
                         type='text'
